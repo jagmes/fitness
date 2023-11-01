@@ -17,7 +17,7 @@ public class JavaProject {
             choice = mm.getChoice();
             switch (choice) {
                 case 1:
-                    fh.readFile();
+
                     fh.overWriteFile(members);
                     mem = mm.addMembers(members);
                     fh.appendFile(mem);
@@ -29,9 +29,7 @@ public class JavaProject {
                     break;
 
                 case 3:
-                    fh.readFile();
-                    String memberInfo = mm.printMemberInfo((Member) members);
-                    System.out.println(memberInfo);
+                    fh.readFile(); //  Это считывает из файла.
                     break;
             }
 
