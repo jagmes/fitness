@@ -10,7 +10,7 @@ public class MembershipManagement   {
         this.reader = new Scanner(System.in);
     }
 
-    public int getIntInput(){
+    public int getIntInput(){ // вызывается каждый раз , при вызове sout() методами.
         int value = 0;
         boolean validInput = false;
 

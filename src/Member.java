@@ -6,22 +6,23 @@ public class Member extends LinkedList<Member> implements Calculator{
     private int memberID;
     private String name;
     private double fees;
+    private int club;
     private  int membershipPoints;
 
     //Конструктор.
     public Member(char pMemberType, int pMemberID, String pName, double pFees /*int pMembershipPoints*/) {
-        this.memberType = pMemberType;
+         this.memberType = pMemberType;
         this.memberID = pMemberID;
         this.name = pName;
         this.fees = pFees;
-       /* this.membershipPoints = pMembershipPoints;*/
+     //   this.membershipPoints = pMembershipPoints;
     }
     // IDE
-    public Member(char pMemberType, int pMemberID, String pName, double pFees, int club, Calculator cal) {
+   /* public Member(char pMemberType, int pMemberID, String pName, double pFees, int club, Calculator cal) {
     }
     //IDE
     public Member(int memberID, String name, double fees, int club, Calculator<Integer> cal) {
-    }
+    }*/
 
 
     // геттеры
@@ -42,6 +43,8 @@ public class Member extends LinkedList<Member> implements Calculator{
     }
 
     // сеттеры
+
+
 
 
     public void setMemberType(char pMemberType) {
@@ -67,7 +70,6 @@ public class Member extends LinkedList<Member> implements Calculator{
                 ", memberID=" + memberID +
                 ", name='" + name + '\'' +
                 ", fees=" + fees +
-                ", membershipPoints=" + membershipPoints +
                 '}';
     }
 

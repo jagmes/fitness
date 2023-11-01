@@ -17,7 +17,17 @@ public class JavaProject {
             choice = mm.getChoice();
             switch (choice) {
                 case 1:
+                    mm.printClubOptions();
+                    choice= mm.getChoice();
+                    if (choice == 1){
+                        
+                    } else if (choice == 2) {
+                        
+                    } else if (choice == 3) {
 
+                    } else if (choice ==4){
+
+                    }
                     fh.overWriteFile(members);
                     mem = mm.addMembers(members);
                     fh.appendFile(mem);
@@ -29,7 +39,8 @@ public class JavaProject {
                     break;
 
                 case 3:
-                    fh.readFile(); //  Это считывает из файла.
+                    fh.readFile();//  Это считывает из файла.
+                    mem= mm.printMemberInfo((Member) members);
                     break;
             }
 

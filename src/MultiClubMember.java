@@ -1,7 +1,7 @@
 public class MultiClubMember extends Member{
     private int membershipPoints;
 
-    public MultiClubMember(char pMemberType, int pMemberID, String pName, double pFees, int pMembershipPoints) {
+            public MultiClubMember(char pMemberType, int pMemberID, String pName, double pFees, int pMembershipPoints) {
         super(pMemberType, pMemberID, pName, pFees);
     }
 
