@@ -50,14 +50,14 @@ public class MembershipManagement   {
 
     public String addMembers(LinkedList <Member> members){
         String name = "";
-        int club = 0;
+        int club=0;
         double fees = 0;
         int memberID = 0;
-        Calculator <Integer> cal = null;
-        Member mbr= new Member(memberID, name, fees, club, clubID ->memberID+fees );
+        Calculator <Integer> cal;
+        Member mbr= new Member(memberID, name, fees, club, clubID -> {return 8;});
         members.add(mbr);
-        double additVal = cal.calculateFees(club);
-        mbr.setFees(fees + additVal);
+        //double additVal = cal.calculateFees(club);
+        mbr.setFees(fees + club);
         String mem = "Добавлен посетитель: "  +mbr.getName()+ ",ID: "+mbr.getMemberID()+ ",цена: " +mbr.getFees();
         //заморочка  /*  Починил? */ // Жесть. // нет не починил.
         return mem;

@@ -28,7 +28,8 @@ public class JavaProject {
 
                 case 3:
                     fh.readFile();
-                   // mm.printMemberInfo();
+                    String memberInfo = mm.printMemberInfo((Member) members);
+                    System.out.println(memberInfo);
                     break;
             }
 
