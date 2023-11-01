@@ -17,6 +17,7 @@ public class JavaProject {
             choice = mm.getChoice();
             switch (choice) {
                 case 1:
+                    fh.readFile();
                     fh.overWriteFile(members);
                     mem = mm.addMembers(members);
                     fh.appendFile(mem);
