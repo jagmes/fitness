@@ -16,32 +16,15 @@ public class JavaProject {
         do {
             choice = mm.getChoice();
             switch (choice) {
-                case 1:
-                    mm.printClubOptions();
-                    choice= mm.getChoice();
-                    if (choice == 1){
-                        
-                    } else if (choice == 2) {
-                        
-                    } else if (choice == 3) {
-
-                    } else if (choice ==4){
-
-                    }
+                case 1->  {mm.printClubOptions(); /*print club options*/ choice= mm.getChoice();/*выбираем опцию*/
                     fh.overWriteFile(members);
                     mem = mm.addMembers(members);
-                    fh.appendFile(mem);
-                    break;
+                    fh.appendFile(mem);}
+                case 2 -> mm.removeMember(members);
 
-                case 2:
+                case 3-> {fh.readFile();//  Это считывает из файла.
+                    mem= mm.printMemberInfo((Member) members);}
 
-                    mm.removeMember(members);
-                    break;
-
-                case 3:
-                    fh.readFile();//  Это считывает из файла.
-                    mem= mm.printMemberInfo((Member) members);
-                    break;
             }
 
         }while (choice != -1) ;

@@ -17,6 +17,9 @@ public class Member extends LinkedList<Member> implements Calculator{
         this.fees = pFees;
      //   this.membershipPoints = pMembershipPoints;
     }
+
+    public Member(int memberID, String name, double fees, int club, Object object) {
+    }
     // IDE
    /* public Member(char pMemberType, int pMemberID, String pName, double pFees, int club, Calculator cal) {
     }

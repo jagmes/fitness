@@ -51,10 +51,11 @@ public class MembershipManagement   {
     public String addMembers(LinkedList <Member> members){
         String name = "";
         int club=0;
-        double fees = 0;
+        int clubID = 0;
+        double fees = 1;
         int memberID = 0;
         Calculator <Integer> cal;
-        Member mbr= new Member(memberID, name, fees, club, clubID -> {return 8;});
+        Member mbr= new Member(memberID, name, fees, club, clubID);
         members.add(mbr);
         //double additVal = cal.calculateFees(club);
         mbr.setFees(fees + club);
