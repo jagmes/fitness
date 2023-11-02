@@ -48,26 +48,52 @@ public class MembershipManagement   {
     }
 
 
-    public String addMembers(LinkedList <Member> members){
+    public String addMembers(LinkedList <Member> m){
         String name = "";
         int club=0;
         int clubID = 0;
         double fees = 1;
         int memberID = 0;
+        String mem = "";
+
+        Member mbr;
         Calculator <Integer> cal;
         System.out.println("Введите имя: ");
         name = reader.nextLine();
         printClubOptions();
         System.out.println("Введите  номер ID  клуба: ");
         clubID=reader.nextInt();
-        club = getIntInput();
-
-        Member mbr= new Member(memberID, name, fees, club, clubID);
-        members.add(mbr);
-        //double additVal = cal.calculateFees(club);
-        mbr.setFees(fees + club);
-        String mem = "Добавлен посетитель: "  +mbr.getName()+ ",ID: "+mbr.getMemberID()+ ",цена: " +mbr.getFees();
-        //заморочка  /*  Починил? */ // Жесть. // нет не починил.
+        club = getIntInput(); // назначаем ID Клуба
+        if (m.size()>0){
+            memberID =m.getLast().getMemberID()+1; // проверяем последний ИД пользователя и не = ли он нулю.
+        }else memberID = 1;
+            if (club != 4){ // 1  клуб
+            cal = (n)->{switch (n) {
+                case 1:
+                    return 900;
+                case 2:
+                    return 950;
+                case 3:
+                    return 1000;
+                default:
+                    return -1;
+            }};
+            fees= cal.calculateFees(club);
+                mbr = new SingleClubMember('S', memberID, name, fees,
+                        club);
+                m.add(mbr);
+                 mem = "Добавлен посетитель: "  +mbr.getName()+ ",ID: "+mbr.getMemberID()+ ",цена: " +mbr.getFees();
+                return mem;
+            } else if (club == 4){ // нескольких клубов
+                cal = (n)-> {return 1200;};
+                fees= cal.calculateFees(club);
+                int pMembershipPoints = 0;
+                mbr = new MultiClubMember('M',memberID,name,fees,pMembershipPoints);
+                m.add(mbr);
+                mem = "Добавлен посетитель: "  +mbr.getName()+ ",ID: "+mbr.getMemberID()+ ",цена: " +mbr.getFees();
+                return  mem;
+            }
+      //  Member mbr= new Member(memberID, name, fees, club, clubID);
         return mem;
     }
 
