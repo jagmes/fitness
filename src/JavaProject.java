@@ -16,10 +16,7 @@ public class JavaProject {
         do {
             choice = mm.getChoice();
             switch (choice) {
-                case 1->  {mm.printClubOptions(); /*print club options*/ choice= mm.getChoice();/*выбираем опцию*/
-
-                   // mem = mm.addMembers(members);
-                   /* fh.appendFile(mem);*/}
+                case 1-> {mem = mm.addMembers(members); fh.appendFile(mem);}
                 case 2 -> {mm.removeMember(members);fh.overWriteFile(members);}
 
                 case 3-> {fh.readFile();//  Это считывает из файла.
