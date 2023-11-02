@@ -55,6 +55,13 @@ public class MembershipManagement   {
         double fees = 1;
         int memberID = 0;
         Calculator <Integer> cal;
+        System.out.println("Введите имя: ");
+        name = reader.nextLine();
+        printClubOptions();
+        System.out.println("Введите  номер ID  клуба: ");
+        clubID=reader.nextInt();
+        club = getIntInput();
+
         Member mbr= new Member(memberID, name, fees, club, clubID);
         members.add(mbr);
         //double additVal = cal.calculateFees(club);

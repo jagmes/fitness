@@ -34,6 +34,7 @@ public class Member extends LinkedList<Member> implements Calculator{
     }
 
     public int getMemberID() {
+
         return memberID;
     }
 
