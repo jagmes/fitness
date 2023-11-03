@@ -71,9 +71,9 @@ public class Member extends LinkedList<Member> implements Calculator{
     public String toString() {
         return "Member{" +
                 "memberType=" + memberType +
-                ", memberID=" + memberID +
-                ", name='" + name + '\'' +
-                ", fees=" + fees +
+                " ,memberID=" + memberID +
+                " ,name=" + name + '\'' +
+                " ,fees=" + fees +
                 '}';
     }
 

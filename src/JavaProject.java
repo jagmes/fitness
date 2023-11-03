@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class JavaProject {
 
     public static void main(String[] args) {
-        Calculator calc = (x) -> 10 + 29; // пример лямбды
+
         LinkedList<Member> members = new LinkedList<>();
         Scanner select = new Scanner(System.in);
         String mem;
@@ -19,8 +19,8 @@ public class JavaProject {
                 case 1-> {mem = mm.addMembers(members); fh.appendFile(mem);}
                 case 2 -> {mm.removeMember(members);fh.overWriteFile(members);}
 
-                case 3-> {fh.readFile();//  Это считывает из файла.
-                    mem= mm.printMemberInfo((Member) members);}
+                case 3-> {fh.readFile(); //  Это считывает из файла.
+                                        mm.printMemberInfo((Member) members);}
 
             }
 

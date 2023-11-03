@@ -62,8 +62,8 @@ public class MembershipManagement   {
         name = reader.nextLine();
         printClubOptions();
         System.out.println("Введите  номер ID  клуба: ");
-        clubID=reader.nextInt();
-        club = getIntInput(); // назначаем ID Клуба
+        clubID=reader.nextInt();    // назначаем ID Клуба
+        club = reader.nextInt();
         if (m.size()>0){
             memberID =m.getLast().getMemberID()+1; // проверяем последний ИД пользователя и не = ли он нулю.
         }else memberID = 1;
@@ -82,7 +82,7 @@ public class MembershipManagement   {
                 mbr = new SingleClubMember('S', memberID, name, fees,
                         club);
                 m.add(mbr);
-                 mem = "Добавлен посетитель: "  +mbr.getName()+ ",ID: "+mbr.getMemberID()+ ",цена: " +mbr.getFees();
+                 mem = "Добавлен посетитель: "  +mbr.getName()+ " ID: "+mbr.getMemberID()+ " цена: " +mbr.getFees();
                 return mem;
             } else if (club == 4){ // нескольких клубов
                 cal = (n)-> {return 1200;};
@@ -90,7 +90,7 @@ public class MembershipManagement   {
                 int pMembershipPoints = 0;
                 mbr = new MultiClubMember('M',memberID,name,fees,pMembershipPoints);
                 m.add(mbr);
-                mem = "Добавлен посетитель: "  +mbr.getName()+ ",ID: "+mbr.getMemberID()+ ",цена: " +mbr.getFees();
+                mem = "Добавлен посетитель: "  +mbr.getName()+ " ID: "+mbr.getMemberID()+ " цена: " +mbr.getFees();
                 return  mem;
             }
       //  Member mbr= new Member(memberID, name, fees, club, clubID);
