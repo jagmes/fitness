@@ -123,6 +123,7 @@ public class MembershipManagement {
             if (m.get(i).getMemberID() == memID){
                 m.toString();}
             String[] memberInfo = m.get(i).toString().split(", ");
+            System.out.println(memberInfo);
 
         }
     }
